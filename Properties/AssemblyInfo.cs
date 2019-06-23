@@ -8,9 +8,9 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyTitle("eProcClientWSLibrary")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("Tequa Creek Holdings, LLC")]
-[assembly: AssemblyProduct("eProcClientWSLibrary")]
-[assembly: AssemblyCopyright("Copyright © Tequa Creek 2014-2019")]
+[assembly: AssemblyCompany("Overthink, LLC")]
+[assembly: AssemblyProduct("simpleContactsWSClientLibrary")]
+[assembly: AssemblyCopyright("Copyright © Overthink 2019")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("42e20679-7428-4934-ac2a-7a46a6da498b")]
+[assembly: Guid("6EEE93F6-8F81-46B2-8B26-506FA71D1B1A")]
 
 // Version information for an assembly consists of the following four values:
 //
@@ -32,5 +32,5 @@ using System.Runtime.InteropServices;
 // You can specify all the values or you can default the Build and Revision Numbers 
 // by using the '*' as shown below:
 // [assembly: AssemblyVersion("1.0.*")]
-[assembly: AssemblyVersion("4.0.0.11")]
-[assembly: AssemblyFileVersion("4.0.0.11")]
+[assembly: AssemblyVersion("1.0.0.1")]
+[assembly: AssemblyFileVersion("1.0.0.1")]

@@ -28,13 +28,43 @@ namespace Overthink.SimpleContactsWSClientLibrary
             }
         }
 
-        public APICallResult AddContact(Contact objContact)
+        public Contact getContactById(string contactId)
+        {
+
+            Contact objReturnValue = new Contact();
+
+            string strRequestURL = m_strSCWebServicesBaseUrl + "ws/contact/{id}/";
+            HttpWebRequest request = WebRequest.Create(strRequestURL) as HttpWebRequest;
+
+            request.Method = "GET";
+            request.ContentType = "application/json";
+
+            using (HttpWebResponse response = request.GetResponse() as HttpWebResponse)
+            {
+                if (response.StatusCode == HttpStatusCode.OK)
+                {
+                    Stream stream1 = response.GetResponseStream();
+                    StreamReader sr = new StreamReader(stream1);
+                    string strsb = sr.ReadToEnd();
+                    objReturnValue = JsonConvert.DeserializeObject<Contact>(strsb);
+                }
+                else
+                {
+                    throw new Exception(String.Format("Server error (HTTP {0}: {1}).", response.StatusCode, response.StatusDescription));
+                }
+            }
+
+            return objReturnValue;
+
+        }       // getContactById()
+
+        public APICallResult addContact(Contact contact)
         {
 
             APICallResult objReturnValue = new APICallResult();
 
             string strRequestURL = m_strSCWebServicesBaseUrl + "ws/contact/";
-            byte[] bytPostData = Encoding.UTF8.GetBytes(JsonConvert.SerializeObject(objContact, Formatting.Indented));
+            byte[] bytPostData = Encoding.UTF8.GetBytes(JsonConvert.SerializeObject(contact, Formatting.Indented));
 
             HttpWebRequest request = WebRequest.Create(strRequestURL) as HttpWebRequest;
 
@@ -63,15 +93,15 @@ namespace Overthink.SimpleContactsWSClientLibrary
 
             return objReturnValue;
 
-        }       // AddContact()
+        }       // addContact()
 
-        public APICallResult UpdateContact(Contact objContact)
+        public APICallResult updateContact(Contact contact)
         {
 
             APICallResult objReturnValue = new APICallResult();
 
             string strRequestURL = m_strSCWebServicesBaseUrl + "ws/contact/";
-            byte[] bytPostData = Encoding.UTF8.GetBytes(JsonConvert.SerializeObject(objContact, Formatting.Indented));
+            byte[] bytPostData = Encoding.UTF8.GetBytes(JsonConvert.SerializeObject(contact, Formatting.Indented));
 
             HttpWebRequest request = WebRequest.Create(strRequestURL) as HttpWebRequest;
 
@@ -100,9 +130,9 @@ namespace Overthink.SimpleContactsWSClientLibrary
 
             return objReturnValue;
 
-        }       // UpdateContact()
+        }       // updateContact()
 
-        public APICallResult DeleteContact(string contactId)
+        public APICallResult deleteContact(string contactId)
         {
 
             APICallResult objReturnValue = new APICallResult();
@@ -131,7 +161,7 @@ namespace Overthink.SimpleContactsWSClientLibrary
 
             return objReturnValue;
 
-        }       // DelectContact()
+        }       // delectContact()
 
     }       // class
 }       // namespace
