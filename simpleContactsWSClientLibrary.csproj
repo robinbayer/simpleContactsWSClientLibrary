@@ -8,8 +8,8 @@
     <ProjectGuid>{06FD0712-A5FE-490B-B042-48F3F6D143E5}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>TequaCreek.eProcClientWSLibrary</RootNamespace>
-    <AssemblyName>TequaCreek.eProcClientWSLibrary</AssemblyName>
+    <RootNamespace>Overthink.SimpleContactsWSClientLibrary</RootNamespace>
+    <AssemblyName>Overthink.SimpleContactsWSClientLibrary</AssemblyName>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -55,18 +55,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ADUser.cs" />
+    <Compile Include="APICallResult.cs" />
+    <Compile Include="Contact.cs" />
     <Compile Include="Controller.cs" />
-    <Compile Include="DeniedRequisitionEMailMessageParameter.cs" />
-    <Compile Include="existingVendor.cs" />
-    <Compile Include="GenericCallResult.cs" />
-    <Compile Include="PlacedInHoldForBudgetModificationEMailMessageParameter.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="purchaseOrder.cs" />
-    <Compile Include="PurchaseOrderCreatedEMailMessageParameter.cs" />
-    <Compile Include="RequisitionApprovalHistoryEntry.cs" />
-    <Compile Include="RequisitionForReturn.cs" />
-    <Compile Include="ReturnedRequisitionEMailMessageParameter.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config">

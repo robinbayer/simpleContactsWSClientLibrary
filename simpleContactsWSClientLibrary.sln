@@ -1,9 +1,11 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 11.00
-# Visual Studio 2010
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "simpleContactsWSClientLibrary", ".\simpleContactsWSClientLibrary.csproj", "{06FD0712-A5FE-490B-B042-48F3F6D143E5}"
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.572
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "simpleContactsWSClientLibrary", "simpleContactsWSClientLibrary.csproj", "{06FD0712-A5FE-490B-B042-48F3F6D143E5}"
 EndProject
-Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "TestHarness", "TestHarness\TestHarness.vbproj", "{54A6C050-3A25-4F9E-8634-F4560B266070}}"
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "TestHarness", "TestHarness\TestHarness.vbproj", "{61FEE0A7-BA55-4F0D-B5DB-82A0DC2DF017}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -25,18 +27,21 @@ Global
 		{06FD0712-A5FE-490B-B042-48F3F6D143E5}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
 		{06FD0712-A5FE-490B-B042-48F3F6D143E5}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{06FD0712-A5FE-490B-B042-48F3F6D143E5}.Release|x86.ActiveCfg = Release|Any CPU
-		{54A6C050-3A25-4F9E-8634-F4560B266070}}.Debug|Any CPU.ActiveCfg = Debug|x86
-		{54A6C050-3A25-4F9E-8634-F4560B266070}}.Debug|Mixed Platforms.ActiveCfg = Debug|x86
-		{54A6C050-3A25-4F9E-8634-F4560B266070}}.Debug|Mixed Platforms.Build.0 = Debug|x86
-		{54A6C050-3A25-4F9E-8634-F4560B266070}}.Debug|x86.ActiveCfg = Debug|x86
-		{54A6C050-3A25-4F9E-8634-F4560B266070}}.Debug|x86.Build.0 = Debug|x86
-		{54A6C050-3A25-4F9E-8634-F4560B266070}}.Release|Any CPU.ActiveCfg = Release|x86
-		{54A6C050-3A25-4F9E-8634-F4560B266070}}.Release|Mixed Platforms.ActiveCfg = Release|x86
-		{54A6C050-3A25-4F9E-8634-F4560B266070}}.Release|Mixed Platforms.Build.0 = Release|x86
-		{54A6C050-3A25-4F9E-8634-F4560B266070}}.Release|x86.ActiveCfg = Release|x86
-		{54A6C050-3A25-4F9E-8634-F4560B266070}}.Release|x86.Build.0 = Release|x86
+		{61FEE0A7-BA55-4F0D-B5DB-82A0DC2DF017}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{61FEE0A7-BA55-4F0D-B5DB-82A0DC2DF017}.Debug|Mixed Platforms.ActiveCfg = Debug|x86
+		{61FEE0A7-BA55-4F0D-B5DB-82A0DC2DF017}.Debug|Mixed Platforms.Build.0 = Debug|x86
+		{61FEE0A7-BA55-4F0D-B5DB-82A0DC2DF017}.Debug|x86.ActiveCfg = Debug|x86
+		{61FEE0A7-BA55-4F0D-B5DB-82A0DC2DF017}.Debug|x86.Build.0 = Debug|x86
+		{61FEE0A7-BA55-4F0D-B5DB-82A0DC2DF017}.Release|Any CPU.ActiveCfg = Release|x86
+		{61FEE0A7-BA55-4F0D-B5DB-82A0DC2DF017}.Release|Mixed Platforms.ActiveCfg = Release|x86
+		{61FEE0A7-BA55-4F0D-B5DB-82A0DC2DF017}.Release|Mixed Platforms.Build.0 = Release|x86
+		{61FEE0A7-BA55-4F0D-B5DB-82A0DC2DF017}.Release|x86.ActiveCfg = Release|x86
+		{61FEE0A7-BA55-4F0D-B5DB-82A0DC2DF017}.Release|x86.Build.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {33F6BF70-B9B8-43E9-8CD8-A3142B469398}
 	EndGlobalSection
 EndGlobal

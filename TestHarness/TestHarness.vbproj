@@ -6,7 +6,7 @@
     <ProductVersion>
     </ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{54A6C050-3A25-4F9E-8634-F4560B266070}}</ProjectGuid>
+    <ProjectGuid>{61FEE0A7-BA55-4F0D-B5DB-82A0DC2DF017}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <StartupObject>TestHarness.My.MyApplication</StartupObject>
     <RootNamespace>TestHarness</RootNamespace>
@@ -118,12 +118,6 @@
       <CustomToolNamespace>My</CustomToolNamespace>
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\eProcClientWSLibrary\eProcClientWSLibrary.csproj">
-      <Project>{99DF5473-F37B-4531-8BD7-36C575281E19}</Project>
-      <Name>eProcClientWSLibrary</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
