@@ -13,10 +13,10 @@ namespace Overthink.SimpleContactsWSClientLibrary
 
         private string m_strSCWebServicesBaseUrl;
 
-        private const int METHOD_RETURN_RECORD_NOT_FOUND = 2;
-        private const int METHOD_USER_CANCELED_OPERATION = 3;
-        private const int METHOD_RETURN_UNKNOWN_EXCEPTION_OCCURRED = -999;
-
+        public const int METHOD_RETURN_SUCCESS = 0;
+        public const int METHOD_RETURN_RECORD_NOT_FOUND = -1;
+        public const int METHOD_USER_CANCELED_OPERATION = -2;
+        public const int METHOD_RETURN_UNKNOWN_EXCEPTION_OCCURRED = -999;
 
         public Controller()
         {
@@ -33,7 +33,7 @@ namespace Overthink.SimpleContactsWSClientLibrary
 
             Contact objReturnValue = new Contact();
 
-            string strRequestURL = m_strSCWebServicesBaseUrl + "ws/contact/{id}/";
+            string strRequestURL = m_strSCWebServicesBaseUrl + string.Format("ws/contact/{0}/", contactId);
             HttpWebRequest request = WebRequest.Create(strRequestURL) as HttpWebRequest;
 
             request.Method = "GET";

@@ -2,58 +2,49 @@
 
     Private Sub Button1_Click(sender As System.Object, e As System.EventArgs) Handles Button1.Click
 
-        Dim objController As New TequaCreek.eProcClientWSLibrary.Controller()
-        Dim objCallResult As TequaCreek.eProcClientWSLibrary.GenericCallResult
+        Dim objController As New Overthink.SimpleContactsWSClientLibrary.Controller()
+        Dim objCallResult As Overthink.SimpleContactsWSClientLibrary.APICallResult
 
 
-        'Dim objPlacedInHoldForBudgetModificationEMailMessageParameter As New TequaCreek.eProcClientWSLibrary.PlacedInHoldForBudgetModificationEMailMessageParameter
+        Dim objContact = New Overthink.SimpleContactsWSClientLibrary.Contact()
+
+        'Public string contactId { Get; Set; }
+        'Public string firstName { Get; Set; }
+        'Public string lastName { Get; Set; }
+        'Public string cellPhone { Get; Set; }
+        'Public string homePhone { Get; Set; }
+        'Public string workPhone { Get; Set; }
+        'Public string emailAddress { Get; Set; }
+        'Public DateTime birthDate { Get; Set; }
+        'Public string locationAddress { Get; Set; }
+
+        objContact.contactId = "e35d4a39-4fa9-44e5-bd2d-a297643c62e4"
+        objContact.firstName = "Robin"
+        objContact.lastName = "Bayer"
+        objContact.cellPhone = "913-645-6666"
+        objContact.homePhone = "316-942-7019"
+        objContact.workPhone = "785-371-4970"
+        objContact.birthDate = #9/19/1970#
+        objContact.locationAddress = "411 Fig Vine Drive"
+
+        'objCallResult = objController.updateContact(objContact)
+
+        objContact = objController.getContactById("e35d4a39-4fa9-44e5-bd2d-a297643c62e4")
 
 
-        'objPlacedInHoldForBudgetModificationEMailMessageParameter.requisitionId = 201025
-        'objPlacedInHoldForBudgetModificationEMailMessageParameter.specificReason = "This is the specific reason text for placing into Hold for Budget Modification queue"
 
 
-        'objCallResult = objController.SendPlacedInBudgetHoldModificationEMailMessage(objPlacedInHoldForBudgetModificationEMailMessageParameter)
+        ' e35d4a39-4fa9-44e5-bd2d-a297643c62e4
 
+        If (objCallResult.resultCode = Overthink.SimpleContactsWSClientLibrary.Controller.METHOD_RETURN_SUCCESS) Then
 
-        'Dim objCallResult As List(Of TequaCreek.eProcClientWSLibrary.RequisitionApprovalHistoryEntry)
-        'objCallResult = objController.AddApprovalHistoryEntry(59321, "super.visor", "robin.bayer")
-        'For Each objApprovalHistoryEntry As TequaCreek.eProcClientWSLibrary.RequisitionApprovalHistoryEntry In objCallResult
-
-        '    MsgBox(objApprovalHistoryEntry.SupervisorApprovedUserID)
-
-        'Next
-
-        'MsgBox(objCallResult.AdditionalInformation)
-
-        'objController.SendDeniedRequisitionEMailMessage(64549, False, False, False, False)
-        objCallResult = objController.PushEProcurementAttachmentsIntoOnBase(132667)
-        'objCallResult = objController.PushPrePayAuthorizationDocumentIntoOnBase(201025)
-
-        'If (objCallResult.ResultCode = TequaCreek.eProcClientWSLibrary.GenericCallResult.RESULT_CODE_SUCCESS) Then
-
-        '    MsgBox("Success")
-
-        'Else
-
-        '    MsgBox(String.Format("Not successful - result is {0}, additional info is {1}", objCallResult.ResultCode, objCallResult.AdditionalInformation))
-
-        'End If
-
-
-        'objCallResult = objController.PushRequisitionAttachmentsIntoOnBase(132377)
-        'objCallResult = objController.PushAttachmentsAsInvoiceIntoOnBase(131467)
-
-        If (objCallResult.ResultCode = TequaCreek.eProcClientWSLibrary.GenericCallResult.RESULT_CODE_SUCCESS) Then
-
-            MsgBox("Success")
+            MsgBox(objCallResult.successKeyValue)
 
         Else
 
-            MsgBox(String.Format("Not successful - result is {0}, additional info is {1}", objCallResult.ResultCode, objCallResult.AdditionalInformation))
+            MsgBox(objCallResult.errors.Count)
 
         End If
-
 
 
     End Sub
